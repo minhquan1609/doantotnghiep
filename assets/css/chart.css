@@ -1,0 +1,481 @@
+/* -------------------------------------------------------------Phần link---------------------------------------------- */
+.title-box{
+    width: 13%;
+    min-height: 180px;
+    background-color: rgba(138, 155, 160, 0.8);
+    display: inline-block;
+    margin: 10%;
+    vertical-align: top;
+    box-shadow: 5px 5px 5px 5px rgba(110, 110, 110, 0);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.title-box a{
+    text-decoration: none;
+}
+.icon{
+    width: 30%;
+    height: auto;
+    margin: 20% 0 10% 0;
+}
+.content-text{
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(9, 49, 65);
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+/* -----------------------------------------------------Giám sát------------------------------------------------------- */
+.monitor {
+    position: absolute;
+    top: 775px;
+    left: 108px;
+}
+.para-monitor{
+    list-style: none;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 5px;
+    text-align: center;
+    background: rgba(123, 115, 115, 0.67);
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 4px 1px 1px 1px rgb(84, 81, 118);
+    /* background: linear-gradient(180deg, rgba(51, 122, 202, 0.5) 0%, rgba(6, 77, 210, 0.5) 50%, rgba(120, 127, 216, 0.5) 100%); */
+}
+.para-monitor{
+    cursor: pointer;
+}
+.title-para-monitor{
+    width: 100%;
+    font-size: 20px;
+}
+.icon-para-monitor{
+    width: 23px;
+    height: 23px;
+    padding-top: 5px;
+}
+.value-para-monitor{
+    display: none;
+    font-size: 20px;
+    margin: 5% 0;
+}
+
+/* ------------------------------------------------Điện áp------------------------------------------- */
+#giamsatdienap{
+    display: none;
+}
+#giamsatdongdien{
+    display: none;
+}
+#giamsattanso{
+    display: none;
+}
+#giamsattocdo{
+    display: none;
+}
+#giamsatapsuat{
+    display: none;
+}
+#giamsatnhietdo{
+    display: none;
+}
+#giamsatdoam{
+    display: none;
+}
+
+
+#modal-monitor{
+    display: none;
+    padding-top: 130px;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    z-index: 0;
+}
+
+#voltage-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+.sheet{
+    position: absolute;
+    width: 46%;
+    height: 60%;
+    left: 1.9%;
+    top: 10px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border: 1px solid rgb(206, 206, 206);
+
+}
+
+.table-sheet{
+    position: absolute;
+    width: 100.7%;
+    height: 80%;
+    top: 20.5%;
+    left: -0.5%;
+    /* border-collapse: collapse; */
+}
+
+.title-col-sheet{
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff;
+}
+
+.content-row-voltage{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-current{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-frequency{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-speed{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-flow{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-volume{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-pressure{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-temperature{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-humidity{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.content-row-level{
+    border: 1px solid #989a9b;
+    height: 10%;
+    font-size: 120%;
+    padding: 0;
+    text-align: center;
+}
+
+.title-col-sheet:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.frame-chart{
+    position: absolute;
+    width: 130%;
+    height: 150%;
+    margin-left: 60px;
+    top: 10px;
+    background-color: rgb(255, 255, 255);
+    left: 44%;
+}
+.frame-chart-text{
+    width: 100%;
+    height: 8%;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: Tahoma, Verdana, sans-serif;
+    margin-top: 0%;
+    background-color: rgba(142, 141, 141, 0.2);
+    text-align: center;
+    line-height: 55px;
+    box-shadow: 0px 0px 0px 0.5px #d1d1d4a2;
+}
+.chart{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 70px;
+    padding-bottom: 100px;
+}
+#current-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+#frequency-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+#speed-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+#flow-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+#volume-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+#pressure-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+#temperature-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+#humidity-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+
+#level-monitor{
+    display: block;
+    list-style: none;
+    width: 55%;
+    height: 400px;
+    padding-top: 5%;
+    position: relative;
+}
+.value{
+    position: absolute;
+    width: 21%;
+    text-align: center;
+    margin-top: -8%;
+    top: 112%;
+    left: 14.65%;
+    padding-left: 0%;
+    font-size: 230%;
+}
+
+/*voltage*/
+#export-button-voltage{
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-voltage:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+/*current*/
+#export-button-current {
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-current:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+/*frequency*/
+#export-button-freq {
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-freq:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+/*speed*/
+#export-button-speed {
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-speed:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+/*pressure*/
+#export-button-press {
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-press:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+/*temp*/
+#export-button-temp{
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-temp:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+
+/*humid*/
+#export-button-humid{
+    background-color: #858692; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 10px;
+}
+#export-button-humid:hover {
+    background-color: #4f54ec; /* Darker green on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

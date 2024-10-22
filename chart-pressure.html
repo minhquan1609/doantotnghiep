@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Pressure</title>
+    <link rel="stylesheet" href="assets/css/chart.css">
+</head>
+<body>
+
+        <button id="export-button">Export to Excel</button>
+
+        <div id="pressure-monitor" class="pressure-monitor">
+            <div id="sheet-pressure" class="sheet">
+                <span class="tiltle-report" onclick="open_sheet()">Report</span>
+                <table id="table-sheet-pressure" class="table-sheet">
+                    <tbody class="body-sheet">
+                        <tr class="title-col-sheet">
+                            <th class="content-row-pressure">Time</th>
+                            <th class="content-row-pressure">Pressure</th>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="frame-chart-pressure" class="frame-chart">
+                <p id="frame-chart-pressure-text" class="frame-chart-text">Chart Pressure</p>
+                <canvas id="chart-pressure" class="chart"></canvas>
+            </div>
+        </div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        <script src="assets/js/chart-pressure.js"></script>
+</body>
+</html>

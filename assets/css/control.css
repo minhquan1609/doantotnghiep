@@ -1,0 +1,193 @@
+/********************DIEU KHIEN 2 VAN DIEN********************/
+.on {
+    background-color: rgb(8, 210, 8);
+    color: white;
+}
+.off {
+    background: gray;
+    color: white;
+}
+
+#toggleButton-1{
+    transition: transform 0.2s;
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    top: 563px;
+    left: 275px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px #5b5757;
+    border-radius: 5px;
+}
+
+#toggleButton-2{
+    transition: transform 0.2s;
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    top: 616px;
+    left: 275px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px #5b5757;
+    border-radius: 5px; 
+}
+
+#toggleButton-3{
+    transition: transform 0.2s;
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    top: 563px;
+    left: 415px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px #5b5757;
+    border-radius: 5px; 
+}
+#toggleButton-1:active,
+#toggleButton-2:active,
+#toggleButton-3:active{
+    transform: scale(0.85);
+}
+
+/****************************THAY DOI TAN SO************************************/
+.tabfreq-control{
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+    top: 685px;
+    left: 1260px;
+    display: flex;  
+}
+.setpoint-container-freq-control{
+    position: absolute;
+    top: 723px;
+    left: 280px;
+}
+.setpoint-input-freq-control{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.update-button-freq-control{
+    font-weight: bold;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #99CCFF;
+}
+
+
+/* SETPOINT GIA TRI MAX AP SUAT */
+.setpoint-container-max-pressure{
+    position: absolute;
+    top: 583px;
+    left: 560px;
+}
+.setpoint-input-max-press{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 4px 4px 4px;
+    width: 60px;
+}
+.update-button-max-pressure{
+    font-weight: bold;
+    padding: 4px 4px;
+    cursor: pointer;
+    background-color: #99CCFF;
+}
+
+/* SETPOINT GIA TRI MAX CHENH AP TUI LOC */
+.setpoint-container-max-diffpressure{
+    position: absolute;
+    top: 583px;
+    left: 862px;
+}
+.setpoint-input-max-diffpress{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 4px 4px 4px;
+    width: 60px;
+}
+.update-button-max-diffpressure{
+    font-weight: bold;
+    padding: 4px 4px;
+    cursor: pointer;
+    background-color: #99CCFF;
+}
+
+/************************DIEU KHIEN VAN-BYPASS****************************/
+.setpoint-container {
+    position: absolute;  
+    top: 670px;
+    left: 320px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+.setpoint-input{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+.update-button-bypass{
+    background-color: #99CCFF;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+
+
+/******************CHON CHE DO DIEU KHIEN AUTO MAN OFF ON*******************/
+/*STYLE CHE DO AUTO/MANUAL*/
+.auto-man-setpoint{
+    position: absolute;
+    top: 483px;
+    left: 225px;
+}
+#auto-button, #manual-button {
+    display: none;
+}
+
+.autoButton {
+    box-shadow: 2px 2px #575cbc;
+    padding: 4px 4px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px
+}
+
+.manualButton {
+    box-shadow: 2px 2px #575cbc;
+    padding: 4px 7px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.offButton {
+    box-shadow: 2px 2px #575cbc;
+    padding: 4px 14px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.onButton {
+    box-shadow: 2px 2px #575cbc;
+    padding: 4px 16px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+

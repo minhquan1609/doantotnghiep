@@ -1,0 +1,316 @@
+/*STYLE GIAM SAT CAM BIEN*/
+.tabHumid{
+    display: flex;
+    position: absolute;
+    top: 967px;
+    left: 1075px;
+    font-size: 16px;
+}
+.tabTemp{
+    display: flex;
+    position: absolute;
+    top: 850px;
+    left: 1075px;
+    font-size: 16px;
+}
+.tabTemp-out{
+    display: flex;
+    position: absolute;
+    top: 850px;
+    left: 390px;
+    font-size: 16px;
+}
+.tabTemp-in{
+    display: flex;
+    position: absolute;
+    top: 995px;
+    left:390px;
+    font-size: 16px;
+}
+.tabPress-out{
+    display: flex;
+    position: absolute;
+    top: 850px;
+    left: 525px;
+    font-size: 16px;
+}
+.tabPress-in{
+    display: flex;
+    position: absolute;
+    top: 994px;
+    left: 520px;
+    font-size: 16px;
+}
+.tabDiffpress{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 640px;
+    left: 595px;
+    font-size: 16px;
+}
+/*STYLE GIAM SAT QUAT*/
+.tabfreq{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 625px;
+    left: 1145px;
+    font-size: 16px;
+}
+.tabspeed{
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 585px;
+    left: 1130px;
+    font-size: 16px; 
+}
+.tabcurrent{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 585px;
+    left: 1285px;
+    font-size: 16px;
+}
+.tabvoltage{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 642px;
+    left: 1285px;
+    font-size: 16px;
+}
+
+
+.light-van01 {
+    position: absolute;
+    top: 880px;
+    left: 725px;
+    border: solid 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+}
+
+.light-van02 {
+    position: absolute;
+    top: 1130px;
+    left: 725px;
+    border: solid 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+}
+
+.tabbypass{
+    display: flex;
+    font-weight: bold;
+    color: #0800ff;
+    position: absolute;
+    top: 1000px;
+    left: 694px;
+    display: flex;  
+}
+
+.light-motor{
+    position: absolute;
+    top: 768px;
+    left: 980px;
+    border: solid 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+}
+
+/*DONG HO THOI GIAN THUC*/
+#realtime{
+    display: flex;
+    position: absolute;
+    font-weight: bold;
+    font-size: 23px;
+    color: white;
+    left: 1115px;
+    top: 488px;
+}
+
+
+/*STYLE HIEN THI NHIET DO CAO & NHIET DO ON DINH*/
+.message1 {
+    border-radius: 5px;
+    padding: 5px 5px;
+    position: absolute;
+    top: 910px;
+    left: 1000px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.message2 {
+    border-radius: 5px;
+    padding: 5px 5px;
+    position: absolute;
+    top: 1030px;
+    left: 1000px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.ideal {
+    color: rgb(4, 123, 4); /* Màu cho nhiệt độ, độ ẩm lý tưởng */
+}
+.high {
+    color: rgb(242, 6, 6); /* Màu cho nhiệt độ, độ ẩm cao */
+}
+
+/* STYLE HIEU UNG FAN VA WIND */
+#quatlitam-cham{
+    display: none;
+    position: absolute;
+    scale: 21%;
+    left: 939px;
+    top: 666px;
+}
+#quatlitam-nhanh{
+    display: none;
+    position: absolute;
+    scale: 21%;
+    left: 939px;
+    top: 666px;
+}
+#quatlitam-stop{
+    display: block;
+    position: absolute;
+    scale: 7%;
+    left: 640px;
+    top: 413px;
+}
+
+
+/*------------------STYLE ANIMATION SLOW------------------------*/
+#hot-slow-1{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 350px;
+    top: 660px;
+}
+#hot-slow-2{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 600px;
+    top: 660px;
+}
+#cool-slow-1{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 750px;
+    top: 660px;
+}
+#cool-slow-2{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 990px;
+    top: 660px;
+}
+
+/*------------------STYLE ANIMATION FAST------------------------*/
+#hot-fast-1{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 350px;
+    top: 660px;
+}
+#hot-fast-2{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 600px;
+    top: 660px;
+}
+#cool-fast-1{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 750px;
+    top: 660px;
+}
+#cool-fast-2{
+    display: none;
+    position: absolute;
+    scale: 30%;
+    left: 990px;
+    top: 660px;
+}
+
+
+
+/* STYLE ĐÈN CẢNH BÁO ÁP SUẤT ĐƯỜNG ỐNG */
+#indicator1 {
+    position: absolute;
+    top: 570px;
+    left: 725px;
+    border: solid 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: grey; /* Màu mặc định là xanh lá cây */
+    transition: background-color 0.5s;
+}
+#indicator2 {
+    position: absolute;
+    top: 570px;
+    left: 1018px;
+    border: solid 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: grey; /* Màu mặc định là xanh lá cây */
+    transition: background-color 0.5s;
+}
+
+
+/* STYLE ĐÈN CẢNH BÁO TÚI LỌC BỊ BẨN */
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.fade {
+    animation: fade-animation 1.5s infinite;
+}
+
+@keyframes fade-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

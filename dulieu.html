@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>BMS CONTROL</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/control.css">
+    <link rel="stylesheet" href="assets/css/monitoring.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/chart.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a46b7b6629.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="header-spkt">
+        <a href="https://hcmute.edu.vn/">
+            <img src="assets/img/14.jpg" width="450px" height="120px"/>            
+        </a> 
+        <a href="https://feee.hcmute.edu.vn/">
+            <img src="assets/img/feee-hcmute.png" width="480px" height="100px"/>
+        </a>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <b>
+                <li><a href="thongtin.html">THÔNG TIN</a></li>
+                <li><a href="dulieu.html">GIÁM SÁT & ĐIỀU KHIỂN</a></li>
+                <li><a href="mohinh.html">MÔ HÌNH</a></li>
+                <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                <li><a href="trangchu.html">TRANG CHỦ</a></li>
+            </b>
+        </ul>   
+    </nav>
+
+    <div id="image-background-project-1">
+        <img style="border-radius: 10px;" src="assets/img/background-project.png" width="100%" height="270px"/>
+    </div>
+   
+    <div>
+        <p id="nameproject-1">ỨNG DỤNG BMS VÀ IOT 2050 SIEMENS</p>
+        <p id="nameproject-2">GIÁM SÁT VÀ ĐIỀU KHIỂN HỆ THỐNG AHU KẾT HỢP CHILLER</p>
+        <p id="nameproject-3">CÔNG NGHIỆP LÀM MÁT</p>
+    </div>
+
+    <main>
+
+        <!-- DONG HO THOI GIAN THUC -->
+        <div id="realtime">
+            <div id="times"></div>
+            &nbsp;
+            &nbsp;
+            <div id="dates"></div>
+        </div>
+
+        <!---------------CHON CHE DO AUTO/MANUAL---------------------------------->
+        <div class="auto-man-setpoint">
+            <button id="on-button" class="onButton"><b>ON</b></button>
+            <button id="auto-button" class="autoButton"><b>AUTO</b></button>
+            <button id="manual-button" class="manualButton"><b>MAN</b></button>
+            <button id="off-button" class="offButton"><b>OFF</b></button>
+
+            <div id="setpointContainer" style="display: none;">
+                <input style="font-weight: bold; padding: 5px 10px; 
+                font-size: 13px; width: 70px;
+                " type="number" id="setpoint" placeholder="Enter">
+                <button style="padding: 4px 10px; cursor: pointer;
+                background-color: #99CCFF;
+                box-shadow: 2px 2px #999aad;
+                padding: 5px 10px;
+                font-weight: bold;" onclick="updatetemperatureFirebase()">Update Setpoint</button>
+            </div>
+        </div>
+        
+        <!-- DU LIEU DUOC CAP NHAT TREN FIREBASE -->
+        <center><img src="assets/img/mhgs.png" alt="" width="94%"></center>
+
+        <!--THONG SO CAM BIEN-->
+        <div class="tabTemp">
+            <h3 style="color: #000000;" id="temperature"></h3>                         
+        </div>
+        
+        <div class="tabHumid">
+            <h3 style="color: #000000;" id="humidity"></h3>
+        </div>
+
+        <div class="tabTemp-out">                              
+            <h3 style="color: #000000;" id="temperature-out"></h3>                        
+        </div>
+
+        <div class="tabTemp-in">                              
+            <h3 style="color: #000000;" id="temperature-in"></h3>                         
+        </div>
+
+        <div class="tabPress-out">                             
+            <h3 style="color: #000000;" id="pressure-out"></h3>                          
+        </div> 
+        
+        <div class="tabPress-in">                           
+            <h3 style="color: #000000;" id="pressure-in"></h3>                            
+        </div> 
+
+        <div class="tabDiffpress">                              
+            <h3 style="color: #000000;" id="diffpress"></h3>                            
+        </div>
+
+        <!--THONG SO QUAT-->
+        <div class="tabfreq">
+            <h3 style="color: #000000;" id="freq-monitor"></h3>
+        </div>
+        <div class="tabspeed">                              
+            <h3 style="color: #000000;" id="speed"></h3>                           
+        </div>
+
+        <div class="tabcurrent">                              
+            <h3 style="color: #000000;" id="current"></h3>                          
+        </div>
+
+        <div class="tabvoltage">
+            <h3 style="color: #000000;" id="voltage"></h3>
+        </div>     
+        <!--DEN GIAM SAT VAN01/ VAN02 / BYPASS-->
+        <div class="light-van01" id="light-van01"></div>
+        <div class="light-van02" id="light-van02"></div>
+
+
+        <div class="tabbypass">
+            <div style="color: #0800ff;" id="display-value-bypass"></div>
+        </div>
+ 
+        <!-- VAN 1 -->            
+        <!-- Gọi hàm 'toggleState' khi nhấn nút -->
+        <div style="display: none;" id="van01-control"></div>
+        <button id="toggleButton-1" class="off" onclick="toggleState1()">ON</button>
+
+        <!-- VAN 2 -->                 
+        <!-- Gọi hàm 'toggleState' khi nhấn nút -->
+        <div style="display: none;" id="van02-control"></div>
+        <button id="toggleButton-2" class="off" onclick="toggleState2()">ON</button>
+
+        <!------------------ON/OFF ĐỘNG CƠ--------------------->
+        <div class="light-motor" id="motor"></div>
+        
+        <!-- Gọi hàm 'toggleState' khi nhấn nút -->
+        <button id="toggleButton-3" class="off" onclick="toggleState3()">ON</button>
+    
+
+        <!--------------------DIEU KHIEN VAN BYPASS-------------------->
+        <div class="setpoint-container">
+            <select class="setpoint-input" id="bypass">
+                <!-- Option values from 0 to 100 -->
+                <option value="0">0</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
+            </select>
+            <button id="update-setpoint" class="update-button-bypass" onclick="updateSetpointbypass()">Update</button>
+        </div>
+
+        <!--THAY DOI TAN SO-->
+        <div class="setpoint-container-freq-control">
+            <input class="setpoint-input-freq-control" type="number" id="freq-control" min="1" max="50" placeholder="Enter">
+            <button id="update-setpoint-freq-control" class="update-button-freq-control" onclick="updateSetpointfreq()">Update</button>
+        </div>
+        
+
+        <!-----------------------------GIA LAP SU CO DUONG ONG--------------------------->
+        <!-- THIET LAP GIA TRI AP SUAT MAX -->
+        <div class="setpoint-container-max-pressure">
+            <input class="setpoint-input-max-press" type="number" id="pressure-out-max" placeholder="Enter">
+            <button id="update-setpoint-max-pressure" class="update-button-max-pressure" onclick="updateSetpointPressmax()">Update</button>
+        </div>     
+        
+        <!-----------------------------GIA LAP TUI LOC BI BAN--------------------------->
+        <!-- THIET LAP GIA TRI CHENH AP CHO TUI LOC -->
+        <div class="setpoint-container-max-diffpressure">
+            <input class="setpoint-input-max-diffpress" type="number" id="diffpressure-max" placeholder="Enter">
+            <button id="update-setpoint-max-diffpressure" class="update-button-max-diffpressure" onclick="updateSetpointdiffPressmax()">Update</button>
+        </div>
+
+
+        <!--ANIMATION-FLOW-->
+        <div style="display: none;" id="line-1-1"></div>
+        <div style="display: none;" id="line-1-2"></div>
+        <div style="display: none;" id="line-1-3"></div>
+        <div style="display: none;" id="line-1-4"></div>
+        <div style="display: none;" id="line-1-5"></div>
+        <div style="display: none;" id="line-1-6-1"></div>
+        <div style="display: none;" id="line-1-6-2"></div>
+        <div style="display: none;" id="line-3-1"></div>
+        <div style="display: none;" id="line-3-2-1"></div>
+        <div style="display: none;" id="line-3-2-2"></div>
+        <div style="display: none;" id="line-3-2-3"></div>
+        <div style="display: none;" id="line-3-3"></div>
+        <div style="display: none;" id="line-3-4-1"></div>
+        <div style="display: none;" id="line-3-6"></div>
+        <div style="display: none;" id="line-3-7"></div>
+        <div style="display: none;" id="line-3-8"></div>
+        <div style="display: none;" id="line-3-9"></div>
+        <div style="display: none;" id="line-3-10"></div>
+
+        
+        <img id="quatlitam-cham" src="assets/img/motor-20hz.gif" alt="">
+        <img id="quatlitam-nhanh" src="assets/img/motor-50hz.gif" alt="">
+        <img id="quatlitam-stop" src="assets/img/motor.png" alt="">
+        
+        <img id="hot-slow-1" src="assets/img/hot-slow.gif" alt="">
+        <img id="hot-slow-2" src="assets/img/hot-slow.gif" alt="">
+
+        <img id="cool-slow-1" src="assets/img/cool-slow.gif" alt="">
+        <img id="cool-slow-2" src="assets/img/cool-slow.gif" alt="">
+
+        <img id="hot-fast-1" src="assets/img/hot-fast.gif" alt="">
+        <img id="hot-fast-2" src="assets/img/hot-fast.gif" alt="">
+
+        <img id="cool-fast-1" src="assets/img/cool-fast.gif" alt="">
+        <img id="cool-fast-2" src="assets/img/cool-fast.gif" alt="">
+        
+        
+        <div id="indicator1"></div>
+
+        <div id="indicator2"></div>
+        <div id="dirtyFilterMessage" style="display: none; color: red; font-weight: bold; 
+        position: absolute; top: 770px; left: 610px;">Dirty Filter</div>
+
+        <audio id="alertSound">
+            <source src="assets/Am_thanh/warning_sound.mp3" type="audio/mpeg">
+        </audio>
+
+
+<!--------------------------------------------GIAM SAT THONG SO THONG QUA BIEU DO --------------------------------------------------------------->
+        <ul class="monitor">
+            <li class="para-monitor" onclick="function_voltage()">
+                <img class="icon-para-monitor" src="assets/img/voltage.png" alt="">
+                <div id="value-voltage-monitor" class="value-para-monitor"></div>
+            </li>
+            
+            <li class="para-monitor" onclick="function_current()">                    
+                <img class="icon-para-monitor" src="assets/img/current.png" alt="">
+                <div id="value-current-monitor" class="value-para-monitor"></div>
+            </li>
+            
+            <li class="para-monitor" onclick="function_frequency()">                   
+                <img class="icon-para-monitor" src="assets/img/frequency.png" alt="">
+                <div id="value-frequency-monitor" class="value-para-monitor"></div>
+            </li>
+                       
+            <li class="para-monitor" onclick="function_speed()">                    
+                <img class="icon-para-monitor" src="assets/img/speed.png" alt="">
+                <div id="value-speed-monitor" class="value-para-monitor"></div>
+            </li>
+             
+            <li class="para-monitor" onclick="function_pressure()">                    
+                <img class="icon-para-monitor" src="assets/img/pressure.png" alt="">
+                <div id="value-pressure-monitor" class="value-para-monitor"></div>
+            </li>
+            
+            <li class="para-monitor" onclick="function_temperature()">                   
+                <img class="icon-para-monitor" src="assets/img/temperature.png" alt="">
+                <div id="value-temperature-monitor" class="value-para-monitor"></div>
+            </li>
+            
+            <li class="para-monitor" onclick="function_humidity()">                   
+                <img class="icon-para-monitor" src="assets/img/humidity.png" alt="">
+                <div id="value-humidity-monitor" class="value-para-monitor"></div>
+            </li>
+        </ul>
+
+        <div id="giamsatdienap">
+
+            <button id="export-button-voltage">Export to Excel</button>
+
+            <div id="voltage-monitor" class="voltage-monitor">
+                <div id="sheet-voltage" class="sheet">
+                    <span class="tiltle-report">Report</span>
+                    <table id="table-sheet-voltage" class="table-sheet">
+                        <tbody class="body-sheet">
+                            <tr class="title-col-sheet">
+                                <th class="content-row-voltage">Time</th>
+                                <th class="content-row-voltage">Voltage</th>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-voltage"></td>
+                                <td class="content-row-voltage"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="frame-chart-voltage" class="frame-chart">
+                    <p id="frame-chart-voltage-text" class="frame-chart-text">Chart Voltage</p>
+                    <canvas id="chart-voltage" class="chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="giamsatdongdien">
+
+            <button id="export-button-current">Export to Excel</button>
+
+            <div id="current-monitor" class="current-monitor">
+                <div id="sheet-voltage" class="sheet">
+                    <span class="tiltle-report">Report</span>
+                    <table id="table-sheet-current" class="table-sheet">
+                        <tbody class="body-sheet">
+                            <tr class="title-col-sheet">
+                                <th class="content-row-current">Time</th>
+                                <th class="content-row-current">Current</th>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                            <tr class="title-col-sheet">
+                                <td class="content-row-current"></td>
+                                <td class="content-row-current"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="frame-chart-current" class="frame-chart">
+                    <p id="frame-chart-current-text" class="frame-chart-text">Chart Current</p>
+                    <canvas id="chart-current" class="chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="giamsattanso">
+
+            <button id="export-button-freq">Export to Excel</button>
+
+        <div id="frequency-monitor" class="frequency-monitor">
+            <div id="sheet-frequency" class="sheet">
+                <span class="tiltle-report" onclick="open_sheet()">Report</span>
+                <table id="table-sheet-frequency" class="table-sheet">
+                    <tbody class="body-sheet">
+                        <tr class="title-col-sheet">
+                            <th class="content-row-frequency">Time</th>
+                            <th class="content-row-frequency">Frequency</th>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-frequency"></td>
+                            <td class="content-row-frequency"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="frq" class="value"></div>
+            <div id="frame-chart-frequency" class="frame-chart">
+                <p id="frame-chart-frequency-text" class="frame-chart-text">Chart Frequency</p>
+                <canvas id="chart-frequency" class="chart"></canvas>
+            </div>
+        </div>
+        </div>
+
+
+        <div id="giamsattocdo">
+            
+            <button id="export-button-speed">Export to Excel</button>
+
+        <div id="speed-monitor" class="speed-monitor">
+            <div id="sheet-speed" class="sheet">
+                <span class="tiltle-report" onclick="open_sheet()">Report</span>
+                <table id="table-sheet-speed" class="table-sheet">
+                    <tbody class="body-sheet">
+                        <tr class="title-col-sheet">
+                            <th class="content-row-speed">Time</th>
+                            <th class="content-row-speed">Speed</th>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-speed"></td>
+                            <td class="content-row-speed"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="frame-chart-speed" class="frame-chart">
+                <p id="frame-chart-speed-text" class="frame-chart-text">Chart Speed</p>
+                <canvas id="chart-speed" class="chart"></canvas>
+            </div>
+        </div>
+        </div>
+
+        <div id="giamsatapsuat">
+            
+            <button id="export-button-press">Export to Excel</button>
+
+        <div id="pressure-monitor" class="pressure-monitor">
+            <div id="sheet-pressure" class="sheet">
+                <span class="tiltle-report" onclick="open_sheet()">Report</span>
+                <table id="table-sheet-pressure" class="table-sheet">
+                    <tbody class="body-sheet">
+                        <tr class="title-col-sheet">
+                            <th class="content-row-pressure">Time</th>
+                            <th class="content-row-pressure">Pressure</th>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-pressure"></td>
+                            <td class="content-row-pressure"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="frame-chart-pressure" class="frame-chart">
+                <p id="frame-chart-pressure-text" class="frame-chart-text">Chart Pressure</p>
+                <canvas id="chart-pressure" class="chart"></canvas>
+            </div>
+        </div>
+        </div>
+
+        <div id="giamsatnhietdo">
+            
+            <button id="export-button-temp">Export to Excel</button>
+        <div id="temperature-monitor" class="temperature-monitor">
+            <div id="sheet-temperature" class="sheet">
+                <span class="tiltle-report" onclick="open_sheet()">Report</span>
+                <table id="table-sheet-temperature" class="table-sheet">
+                    <tbody class="body-sheet">
+                        <tr class="title-col-sheet">
+                            <th class="content-row-temperature">Time</th>
+                            <th class="content-row-temperature">Temperature</th>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-temperature"></td>
+                            <td class="content-row-temperature"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="frame-chart-temperature" class="frame-chart">
+                <p id="frame-chart-temperature-text" class="frame-chart-text">Chart Temperature</p>
+                <canvas id="chart-temperature" class="chart"></canvas>
+            </div>
+        </div>
+        </div>
+
+        <div id="giamsatdoam">
+            <button id="export-button-humid">Export to Excel</button>
+        <div id="humidity-monitor" class="humidity-monitor">
+            <div id="sheet-humidity" class="sheet">
+                <span class="tiltle-report" onclick="open_sheet()">Report</span>
+                <table id="table-sheet-humidity" class="table-sheet">
+                    <tbody class="body-sheet">
+                        <tr class="title-col-sheet">
+                            <th class="content-row-humidity">Time</th>
+                            <th class="content-row-humidity">Humidity</th>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                        <tr class="title-col-sheet">
+                            <td class="content-row-humidity"></td>
+                            <td class="content-row-humidity"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="frame-chart-humidity" class="frame-chart">
+                <p id="frame-chart-humidity-text" class="frame-chart-text">Chart Humidity</p>
+                <canvas id="chart-humidity" class="chart"></canvas>
+            </div>
+        </div>
+        </div>
+
+        
+
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <ul>
+                <p><b>Sinh viên thực hiện</b></p>
+                <li>Nguyễn MINH QUÂN</li>
+                <li>TRỊNH QUANG TUẤN</li>
+                <li>SĐT liên lạc: 0362654393</li>
+                <li>20142395@student.hcmute.edu.com</li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Trường Đại học Sư Phạm Kỹ Thuật TP. Hồ Chí Minh</p>
+        </div>
+    </footer>
+        </footer>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script src="assets/js/data.js"></script>
+    </body>
+</html>

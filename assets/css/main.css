@@ -1,0 +1,225 @@
+
+body{
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    background-attachment: fixed;
+    color: #f1f1f1;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 90px;
+}
+main{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.header-spkt {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*STYLE NAVIGATION*/
+.navbar ul{
+    list-style-type: none;
+    background-color: rgba(128, 128, 128, 0.718);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.navbar a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: #3d3aa2;
+}
+.navbar li{
+    float: right;
+}
+
+
+/*STYLE BACKGROUND-PROJECT*/
+#image-background-project-1 {
+    padding-top: 10px;
+    backdrop-filter: blur(5px);
+}
+
+#nameproject-1 {
+    position: absolute;
+    top: 220px;
+    left: 480px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+#nameproject-2 {
+    position: absolute;
+    top: 300px;
+    left: 280px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+#nameproject-3 {
+    position: absolute;
+    top: 350px;
+    left: 590px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*STYLE TAB MONITORING*/
+.titleContainer
+{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.title
+{   
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 0px;  
+    font-family: "Orbitron", sans-serif;
+    color: #3d3aa2;
+    font-size: 40px;
+}
+
+
+/*STYLE TAB TRANG CHỦ*/
+#background-trangchu-1{
+    padding-top: 0px;
+}
+
+/*STYLE TAB GIỚI THIỆU*/
+.model-equipment-1,
+.model-equipment-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*STYLE TAB MÔ HÌNH*/
+#bg-1,
+#bg-2,
+#bg-3,
+#bg-4{
+    border-radius: 20px;
+}
+#bg-5,
+#bg-6,
+#bg-7,
+#bg-8{
+    border-radius: 20px;
+}
+
+/*STYLE NAVIGATION CHO TRANG DỮ LIỆU HỆ THỐNG*/
+.nav-tabs{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 3px solid #ddd;
+}
+.nav-tabs li{
+    margin-right: 10px;
+}
+.nav-tabs li a{
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    position: relative;
+}
+.nav-tabs li a::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: -3px;
+    background: transparent;
+}
+.nav-tabs li.active a::after, .nav-tabs li:hover a::after{
+    background: #050770;
+}
+
+
+/*STYLE TAB THÔNG TIN*/
+#location_teacher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location_student_sum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location_student {
+    padding-bottom: 100px;
+    margin: 0 20px;
+}
+:root {
+    --primary-color: #3d3aa2;
+}
+.card {                      
+    background: #dddfe1a6;
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    text-align: center;
+    overflow: hidden;                                                    
+}
+.img-face {
+    object-fit: cover;   
+    width: 100%;
+    height: 100%;              
+    object-position: center;
+}       
+.card__img {
+    width: 120px;
+    height: 120px;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    transform: translateY(25px);
+    transition: 0.7s;
+}
+.card h2 {
+    margin-top: 35px;
+}
+.card__img:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    transform: unset;
+    border: none;
+}
+
+
+/*STYLE CHO FOOTER*/
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #6e6d6d;
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    color: #ffffff;
+}
+.footer-bottom{
+    background: #3a3939;
+    width: 100%;
+    padding: 1px 0;
+}
+
+
+

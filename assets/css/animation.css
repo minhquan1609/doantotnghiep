@@ -1,0 +1,375 @@
+#line-1-1 {
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 946px; /* Vị trí dọc của đường thẳng */
+    left: 328px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-1 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+
+@keyframes flow-lefttoright-1-1 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(20px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 1-2*/
+#line-1-2 {
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 946px; /* Vị trí dọc của đường thẳng */
+    left: 450px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-2 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-1-2 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(40px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 1-3*/
+#line-1-3 {
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(11, 96, 243), transparent);
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    top: 946px; /* Vị trí dọc của đường thẳng */
+    left: 570px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-3 3s linear infinite; /* Animation để di chuyển đường thẳng*/
+  }
+  
+@keyframes flow-lefttoright-1-3 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(30px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 1-4*/
+#line-1-4 {
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(11, 96, 243), transparent);
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    top: 946px; /* Vị trí dọc của đường thẳng */
+    left: 640px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-4 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-1-4 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(35px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 1-5*/
+#line-1-5 {
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 946px; /* Vị trí dọc của đường thẳng */
+    left: 780px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-5 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-1-5 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(20px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 1-6-1*/
+#line-1-6-1 {
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 55px;
+    position: absolute;   
+    top: 830px; /* Vị trí dọc của đường thẳng */
+    left: 840px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-6-1 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-1-6-1 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(-70px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 1-6-2*/
+#line-1-6-2 {
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 55px;
+    position: absolute;
+    top: 910px; /* Vị trí dọc của đường thẳng */
+    left: 840px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-1-6-2 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-1-6-2 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(-60px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-1*/
+#line-3-1 {
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(11, 96, 243), transparent);
+    width: 28px;
+    height: 14px;
+    position: absolute;
+    top: 835px; /* Vị trí dọc của đường thẳng */
+    left: 850px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-1 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-1 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(15px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-2*/
+#line-3-2-1 {
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 50px;
+    position: absolute;
+    top: 840px; /* Vị trí dọc của đường thẳng */
+    left: 888px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-2-1 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-2-1 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(35px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-2*/
+#line-3-2-2 {
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 50px;
+    position: absolute;
+    top: 920px; /* Vị trí dọc của đường thẳng */
+    left: 888px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-2-2 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-2-2 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(35px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-2*/
+#line-3-2-3 {
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 50px;
+    position: absolute;
+    top: 1010px; /* Vị trí dọc của đường thẳng */
+    left: 888px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-2-3 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-2-3 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(35px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-4*/
+#line-3-3 {
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 1087px; /* Vị trí dọc của đường thẳng */
+    left: 840px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-3 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-3 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(-60px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-4*/
+#line-3-4-1 {
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 1087px; /* Vị trí dọc của đường thẳng */
+    left: 700px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-4-1 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-4-1 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(-50px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+
+/*LINE 3-6*/
+#line-3-6 {
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 1087px; /* Vị trí dọc của đường thẳng */
+    left: 610px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-6 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-6 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(-30px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-7*/
+#line-3-7 {
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 1087px; /* Vị trí dọc của đường thẳng */
+    left: 508px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-7 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-7 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(-60px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+
+/*LINE 3-8*/
+#line-3-8 {
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(11, 96, 243), transparent);
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 1088px; /* Vị trí dọc của đường thẳng */
+    left: 370px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-8 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-8 {
+0% {
+    transform: translateX(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateX(-40px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+/*LINE 3-9*/
+#line-3-9 {
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 40px;
+    position: absolute;
+    top: 950px; /* Vị trí dọc của đường thẳng */
+    left: 631px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-9 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-9 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(30px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
+/*LINE 3-10*/
+#line-3-10 {
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(11, 96, 243), transparent);
+    width: 14px;
+    height: 50px;
+    position: absolute;
+    top: 1010px; /* Vị trí dọc của đường thẳng */
+    left: 631px; /* Vị trí ngang ban đầu của đường thẳng */
+    animation: flow-lefttoright-3-10 3s linear infinite; /* Animation để di chuyển đường thẳng */
+  }
+  
+@keyframes flow-lefttoright-3-10 {
+0% {
+    transform: translateY(0); /* Vị trí ban đầu của đường thẳng (trái) */
+}
+100% {
+    transform: translateY(40px); /* Vị trí cuối cùng của đường thẳng (phải) */
+}
+}
